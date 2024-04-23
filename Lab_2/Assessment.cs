@@ -25,7 +25,7 @@ namespace Lab_2
             public EDF(List<double> array)
                 : base(array)
             {
-                this.array =array;
+                this.array = array;
             }
 
             public int heaviside_function(double x)

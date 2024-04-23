@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea21 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea22 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.radioNormal = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.radioCauchy = new System.Windows.Forms.RadioButton();
@@ -46,7 +46,7 @@
             this.numericUpDown_par2 = new System.Windows.Forms.NumericUpDown();
             this.chart_pdf = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart_cdf = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.calculation = new System.Windows.Forms.Button();
+            this.button_calculation = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label_bandwidth = new System.Windows.Forms.Label();
@@ -98,6 +98,7 @@
             this.radioCauchy.TabStop = true;
             this.radioCauchy.Text = "Коши";
             this.radioCauchy.UseVisualStyleBackColor = true;
+            this.radioCauchy.CheckedChanged += new System.EventHandler(this.radioCauchy_CheckedChanged);
             // 
             // radioLaplace
             // 
@@ -111,6 +112,7 @@
             this.radioLaplace.TabStop = true;
             this.radioLaplace.Text = "Лапласа";
             this.radioLaplace.UseVisualStyleBackColor = true;
+            this.radioLaplace.CheckedChanged += new System.EventHandler(this.radioLaplace_CheckedChanged);
             // 
             // radioUniform
             // 
@@ -137,6 +139,7 @@
             this.radioExponential.TabStop = true;
             this.radioExponential.Text = "Экспоненциальный";
             this.radioExponential.UseVisualStyleBackColor = true;
+            this.radioExponential.CheckedChanged += new System.EventHandler(this.radioExponential_CheckedChanged);
             // 
             // numericUpDown_N
             // 
@@ -172,7 +175,7 @@
             // 
             this.label_par1.AutoSize = true;
             this.label_par1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_par1.Location = new System.Drawing.Point(426, 115);
+            this.label_par1.Location = new System.Drawing.Point(426, 196);
             this.label_par1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_par1.Name = "label_par1";
             this.label_par1.Size = new System.Drawing.Size(55, 18);
@@ -181,9 +184,20 @@
             // 
             // numericUpDown_par1
             // 
+            this.numericUpDown_par1.DecimalPlaces = 2;
             this.numericUpDown_par1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDown_par1.Location = new System.Drawing.Point(431, 144);
+            this.numericUpDown_par1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDown_par1.Location = new System.Drawing.Point(431, 225);
             this.numericUpDown_par1.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown_par1.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown_par1.Name = "numericUpDown_par1";
             this.numericUpDown_par1.Size = new System.Drawing.Size(112, 24);
             this.numericUpDown_par1.TabIndex = 7;
@@ -197,7 +211,7 @@
             // 
             this.label_par2.AutoSize = true;
             this.label_par2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_par2.Location = new System.Drawing.Point(426, 198);
+            this.label_par2.Location = new System.Drawing.Point(426, 115);
             this.label_par2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_par2.Name = "label_par2";
             this.label_par2.Size = new System.Drawing.Size(79, 18);
@@ -206,9 +220,20 @@
             // 
             // numericUpDown_par2
             // 
+            this.numericUpDown_par2.DecimalPlaces = 2;
             this.numericUpDown_par2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDown_par2.Location = new System.Drawing.Point(431, 227);
+            this.numericUpDown_par2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDown_par2.Location = new System.Drawing.Point(431, 144);
             this.numericUpDown_par2.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown_par2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
             this.numericUpDown_par2.Name = "numericUpDown_par2";
             this.numericUpDown_par2.Size = new System.Drawing.Size(112, 24);
             this.numericUpDown_par2.TabIndex = 8;
@@ -220,16 +245,16 @@
             // 
             // chart_pdf
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart_pdf.ChartAreas.Add(chartArea1);
+            chartArea21.Name = "ChartArea1";
+            this.chart_pdf.ChartAreas.Add(chartArea21);
             this.chart_pdf.Location = new System.Drawing.Point(13, 307);
             this.chart_pdf.Margin = new System.Windows.Forms.Padding(4);
             this.chart_pdf.Name = "chart_pdf";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart_pdf.Series.Add(series1);
+            series21.ChartArea = "ChartArea1";
+            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series21.Legend = "Legend1";
+            series21.Name = "Series1";
+            this.chart_pdf.Series.Add(series21);
             this.chart_pdf.Size = new System.Drawing.Size(458, 374);
             this.chart_pdf.TabIndex = 16;
             this.chart_pdf.TabStop = false;
@@ -237,42 +262,42 @@
             // 
             // chart_cdf
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart_cdf.ChartAreas.Add(chartArea2);
+            chartArea22.Name = "ChartArea1";
+            this.chart_cdf.ChartAreas.Add(chartArea22);
             this.chart_cdf.Location = new System.Drawing.Point(479, 307);
             this.chart_cdf.Margin = new System.Windows.Forms.Padding(4);
             this.chart_cdf.Name = "chart_cdf";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Name = "Series1";
-            this.chart_cdf.Series.Add(series2);
+            series22.ChartArea = "ChartArea1";
+            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series22.Name = "Series1";
+            this.chart_cdf.Series.Add(series22);
             this.chart_cdf.Size = new System.Drawing.Size(466, 374);
             this.chart_cdf.TabIndex = 17;
             this.chart_cdf.TabStop = false;
             this.chart_cdf.Text = "chart_cdf";
             // 
-            // calculation
+            // button_calculation
             // 
-            this.calculation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.calculation.Location = new System.Drawing.Point(680, 228);
-            this.calculation.Margin = new System.Windows.Forms.Padding(4);
-            this.calculation.Name = "calculation";
-            this.calculation.Size = new System.Drawing.Size(122, 37);
-            this.calculation.TabIndex = 9;
-            this.calculation.Text = "Расчет";
-            this.calculation.UseVisualStyleBackColor = true;
-            this.calculation.Click += new System.EventHandler(this.calculation_Click);
+            this.button_calculation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_calculation.Location = new System.Drawing.Point(680, 228);
+            this.button_calculation.Margin = new System.Windows.Forms.Padding(4);
+            this.button_calculation.Name = "button_calculation";
+            this.button_calculation.Size = new System.Drawing.Size(122, 37);
+            this.button_calculation.TabIndex = 9;
+            this.button_calculation.Text = "Расчет";
+            this.button_calculation.UseVisualStyleBackColor = true;
+            this.button_calculation.Click += new System.EventHandler(this.calculation_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(129, 285);
+            this.label5.Location = new System.Drawing.Point(160, 285);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(217, 18);
+            this.label5.Size = new System.Drawing.Size(197, 18);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Плотность распределения";
+            this.label5.Text = "Плотность вероятности";
             // 
             // label6
             // 
@@ -298,22 +323,23 @@
             // 
             // numericUpDown_bandwidth
             // 
+            this.numericUpDown_bandwidth.DecimalPlaces = 2;
             this.numericUpDown_bandwidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDown_bandwidth.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
             this.numericUpDown_bandwidth.Location = new System.Drawing.Point(593, 58);
             this.numericUpDown_bandwidth.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown_bandwidth.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
             this.numericUpDown_bandwidth.Name = "numericUpDown_bandwidth";
             this.numericUpDown_bandwidth.Size = new System.Drawing.Size(112, 24);
             this.numericUpDown_bandwidth.TabIndex = 18;
             this.numericUpDown_bandwidth.Value = new decimal(new int[] {
-            50,
+            12,
             0,
             0,
-            0});
+            65536});
             // 
             // label3
             // 
@@ -352,7 +378,7 @@
             this.Controls.Add(this.numericUpDown_bandwidth);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.calculation);
+            this.Controls.Add(this.button_calculation);
             this.Controls.Add(this.chart_cdf);
             this.Controls.Add(this.chart_pdf);
             this.Controls.Add(this.label_par2);
@@ -400,7 +426,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown_par2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_pdf;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_cdf;
-        private System.Windows.Forms.Button calculation;
+        private System.Windows.Forms.Button button_calculation;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label_bandwidth;
