@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea21 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea22 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.radioNormal = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.radioCauchy = new System.Windows.Forms.RadioButton();
@@ -245,16 +245,16 @@
             // 
             // chart_pdf
             // 
-            chartArea21.Name = "ChartArea1";
-            this.chart_pdf.ChartAreas.Add(chartArea21);
+            chartArea1.Name = "ChartArea1";
+            this.chart_pdf.ChartAreas.Add(chartArea1);
             this.chart_pdf.Location = new System.Drawing.Point(13, 307);
             this.chart_pdf.Margin = new System.Windows.Forms.Padding(4);
             this.chart_pdf.Name = "chart_pdf";
-            series21.ChartArea = "ChartArea1";
-            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series21.Legend = "Legend1";
-            series21.Name = "Series1";
-            this.chart_pdf.Series.Add(series21);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart_pdf.Series.Add(series1);
             this.chart_pdf.Size = new System.Drawing.Size(458, 374);
             this.chart_pdf.TabIndex = 16;
             this.chart_pdf.TabStop = false;
@@ -262,15 +262,15 @@
             // 
             // chart_cdf
             // 
-            chartArea22.Name = "ChartArea1";
-            this.chart_cdf.ChartAreas.Add(chartArea22);
+            chartArea2.Name = "ChartArea1";
+            this.chart_cdf.ChartAreas.Add(chartArea2);
             this.chart_cdf.Location = new System.Drawing.Point(479, 307);
             this.chart_cdf.Margin = new System.Windows.Forms.Padding(4);
             this.chart_cdf.Name = "chart_cdf";
-            series22.ChartArea = "ChartArea1";
-            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series22.Name = "Series1";
-            this.chart_cdf.Series.Add(series22);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Name = "Series1";
+            this.chart_cdf.Series.Add(series2);
             this.chart_cdf.Size = new System.Drawing.Size(466, 374);
             this.chart_cdf.TabIndex = 17;
             this.chart_cdf.TabStop = false;

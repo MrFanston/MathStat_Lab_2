@@ -39,7 +39,7 @@ namespace Lab_2
             {
                 double summ = 0;
                 for(int i=0; i < array.Count(); i++)
-                {
+                {   
                     summ += heaviside_function(x - array[i]);
                 }
                 return summ/ array.Count();

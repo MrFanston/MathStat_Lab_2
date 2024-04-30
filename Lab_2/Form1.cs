@@ -218,7 +218,7 @@ namespace Lab_2
                 X.Add(sdf.pdf(array.Min() + grid * i));
             }
 
-            // рисуем график сглаженной эмпирической функции распределения
+            // рисуем график оценки плотности Розенблатта-Парзена
             chart_pdf.Series.Add("R_P");
             chart_pdf.Series["R_P"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chart_pdf.Series["R_P"].Color = Color.Green;
